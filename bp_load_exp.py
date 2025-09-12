@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 #from sklearn.preprocessing import ModelEncoder
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import LabelEncoder
+import joblib
 
         
 
@@ -57,3 +58,10 @@ Y_pred = log.predict(X_test)
 from sklearn.metrics import accuracy_score
 acc = accuracy_score(Y_pred,Y_test)
 print(f"Accuracy is {acc}")
+
+#serialisation and deserialistation
+joblib.dump(log,"my_trained_model.pkl")
+
+final_model = joblib.load("my_trained_model.pkl")
+print(f"final model intercept is {final_model.intercept_} and the coefficient is {final_model.coef_}")
+print(f"Orig regression intercept is {log.intercept_} and the coefficient is {log.coef_}")

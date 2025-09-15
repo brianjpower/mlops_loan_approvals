@@ -18,6 +18,12 @@ def load_dataset(filename, train=True):
     _data.columns = [c.strip() for c in _data.columns] # remove white spaces from around the column names
     return _data[config.FEATURES]   
 
+# Separate X and y
+def separate_data(data):
+    X = data.drop(config.TARGET, axis=1)
+    y= data[config.TARGET]
+    return X,y
+
 #Split the dataset
 
 def split_data(X,y,test_size=0.2, random_state = 42):

@@ -9,6 +9,9 @@ DATAPATH = os.path.join(PACKAGE_ROOT,"datasets")
 FILE_NAME = 'loan_approval_dataset.csv'
 TEST_FILE = "test_data.csv"
 
+MODEL_NAME = 'classification.pkl'
+SAVE_MODEL_PATH = os.path.join(PACKAGE_ROOT,'trained_models')
+
 TARGET = 'loan_status'
 
 #Final features used in the model

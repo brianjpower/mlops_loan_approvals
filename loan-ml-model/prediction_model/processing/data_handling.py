@@ -38,8 +38,8 @@ def save_pipeline(pipeline_to_save):
     print(f"Model has been saved as {config.MODEL_NAME}")
 
 #De-serialistation Load pipeline (model)
-def load_pipeline():
-    save_path = os.path.join(config.SAVE_MODEL_PATH, config.MODEL_NAME)
+def load_pipeline(pipeline_to_load):
+    save_path = os.path.join(config.SAVE_MODEL_PATH, pipeline_to_load)
     model_loaded = joblib.load(save_path)
-    print(f"Model {config.MODEL_NAME} is loaded") 
+    print(f"Model {pipeline_to_load} is loaded") 
     return model_loaded

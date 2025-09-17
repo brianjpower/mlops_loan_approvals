@@ -7,6 +7,7 @@ include prediction_model\datasets\*.csv
 include prediction_model\trained_models\*.pkl
 include prediction_model\processing\*.py
 include .\tests\*
+include prediction_model\VERSION
 
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]

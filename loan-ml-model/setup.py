@@ -48,7 +48,7 @@ setup(
     package_data={'prediction_model': ['VERSION']},
     install_requires=list_reqs(),
     extras_require={},
-    include_package_data=True,
+    include_package_data=True,  
     classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
